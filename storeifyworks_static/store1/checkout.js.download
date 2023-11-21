@@ -1,0 +1,113 @@
+(function(w,d,u,p,_self){
+	class checkOut{
+		constructor(...params){
+			try{
+				this.Shopify = Shopify;
+			}catch(e){
+				this.Shopify = {};
+			}
+			_self = this;
+			let checkaccount = this.checkPageIsAccount();
+			let checkout = this.checkPageIsCheckout();
+			let step_thank_you = this.Shopify.Checkout?.step || '';
+			if (!checkaccount && !checkout && step_thank_you !== "thank_you") return false;
+			let version = checkout ? 'check-out-version' : (checkaccount ? 'check-account-version' : null);
+			if(step_thank_you === "thank_you" && !version){
+				version = 'check-out-version';
+			}
+			if (version === "check-out-version") {
+				setTimeout(() => _self.checkOutVersionResponse({code:200,msg:"",data:{js:["https://cdn.parcelpanel.com/assets/admin/custom/checkout/20200304.js?v=2.000"],css:[]}}), 1e3)
+			} else if (version === "check-account-version") {
+				setTimeout(() => _self.checkOutVersionResponse({code:200,msg:"",data:{js:["https://cdn.parcelpanel.com/assets/admin/custom/account/20210519.js?v=1.003"],css:[]}}), 1e3)
+			}
+		}
+
+		checkPageIsAccount(){
+			let accountUrl = self.location.href;
+			let getAccountKeyzz = /\/account.*/i;
+			return getAccountKeyzz.test(accountUrl);
+		}
+
+		checkPageIsCheckout(){
+			this.shop = this.Shopify.shop ? this.Shopify.shop : '';
+			this.Checkout = this.Shopify.Checkout ? this.Shopify.Checkout : {};
+			this.OrderStatus = this.Checkout.OrderStatus ? this.Checkout.OrderStatus : {};
+			if(!this.shop) return false;
+			if(typeof this.OrderStatus.addContentBox !== 'function') return false;
+			this.isOrderStatusPage = this.Checkout.isOrderStatusPage ? this.Checkout.isOrderStatusPage : false;
+			if(this.isOrderStatusPage !== true) return false;
+			return true;
+		}
+		checkOutVersionResponse(res){
+			let code = res.code ? parseInt(res.code) : 0,
+				data = res.data ? res.data : {};
+			if(code !== 200) return false;
+			if(data.js || data.css){
+				var h = d.getElementsByTagName('head')[0];
+				if(data.css.length > 0) data.css.forEach(function(v,k){
+					if(!v) return false;
+					if(!/^http/.test(v)){
+						var l = d.createElement("style");
+						l.innerHTML = v;
+						return h.append(l);
+					}
+					var l = d.createElement("link");
+					l.type = "text/css";
+					l.rel = "stylesheet";
+					l.href = v;
+					return h.appendChild(l);
+				})
+				if(data.js.length > 0) data.js.forEach(function(v,k){
+					if(!v) return false;
+					if(!/^http/.test(v)) return eval(v);
+					var s = d.createElement("script");
+					s.type = "text/javascript";
+					s.language = "javascript";
+					s.src = v;
+					return h.appendChild(s);
+				})
+			}
+		}
+		getDataToParams(type,arr = []){
+			if(!type) return "";
+			arr.push("type=" + type);
+			return u + p + "?" + arr.join("&");
+		}
+		sendApiRequest(u,m,d,f){
+			let x = "";
+			m = m != "get" && m != "post" ? "get" : m;
+			d = d || null;
+			f = f || "";
+			if(!d || Object.keys(d).length === 0) d = null, m = "get";
+			if(!u) return false;
+			try{
+				x = new XMLHttpRequest();
+			}catch(e){
+				try{
+					x = new ActiveXObject("Msxml2.XMLHTTP");
+				}catch(e){
+					try{
+						x = new ActiveXObject("Microsoft.XMLHTTP");
+					}catch(e){
+						console.log("Failed to get ajax object, please contact customer service for a solution!");
+					}
+				}
+			}
+			if(!x) return false;
+			x.onreadystatechange = function(){
+				try{
+					if(x.readyState == 4 && (x.status == 200 || x.status == 304)){
+						var d = x.responseText;
+						d = d ? JSON.parse(d) : {};
+						if(f !== "") f(d);
+					}
+				}catch(e){
+					console.log("Ajax response is error, please contact customer service for a solution!");
+				}
+			}
+			x.open(m,u);
+			x.send(d);
+		}
+	}
+	new checkOut();
+}(window,document,"//my.parcelpanel.com","/api/checkout",{}))
