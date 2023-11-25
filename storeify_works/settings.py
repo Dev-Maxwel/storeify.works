@@ -28,6 +28,7 @@ SECRET_KEY = "django-insecure-(zvcmg7c%@rwu8rb8)to1(_hm*=#-qupxeedr4leo%j)cwuf(8
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ["storeify.works", "www.storeify.works", "m-khansoftwebs.com", "www.m-khansoftwebs.com"]
 
 
 # Application definition
@@ -81,26 +82,26 @@ WSGI_APPLICATION = "storeify_works.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-
-
-# #liveserver database
 DATABASES = {
-    'default': {
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'mkhansof_m-khan softwebs db',
-    'USER': config("DBUSER"),
-    'PASSWORD': config("DBPASSWORD"),
-    'HOST': 'localhost',
-    'PORT': '3306',
-    'OPTIONS': {
-    'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-}}}
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
+
+
+# # #liveserver database
+# DATABASES = {
+#     'default': {
+#     'ENGINE': 'django.db.backends.mysql',
+#     'NAME': 'mkhansof_m-khan softwebs db',
+#     'USER': config("DBUSER"),
+#     'PASSWORD': config("DBPASSWORD"),
+#     'HOST': 'localhost',
+#     'PORT': '3306',
+#     'OPTIONS': {
+#     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+# }}}
 
 
 
@@ -160,10 +161,10 @@ STORAGES = {
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
-
-MEDIA_URL = '/media_cdn/'
-MEDIA_DIR = BASE_DIR / '/media_cdn'
-MEDIA_ROOT = os.path.join(BASE_DIR, '/media_cdn/')
+#mdedia configurations
+MEDIA_URL = '/storeifyworks_mediaCDN/'
+MEDIA_DIR = BASE_DIR / '/storeifyworks_mediaCDN'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'storeifyworks_mediaCDN')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

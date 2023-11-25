@@ -649,8 +649,8 @@ Shopify.routes.root = "/";</script>
             </div>
           </div>
         </details>
-      </header-drawer><a href="https://shophomegoods.co/" class="header__heading-link link link--text focus-inset">
-        <img src="storeifyworks_static\store1\images\logo-no-bg.png" alt="HomeGoods" width="150" height="37.5" class="header__heading-logo">
+      </header-drawer><a href="{{ request.build_absolute_uri }}" class="header__heading-link link link--text focus-inset">
+        <img src="{% static 'store1\images\logo-no-bg.png' %}" alt="HomeGoods" width="150" height="37.5" class="header__heading-logo">
 </a><nav class="header__inline-menu">
           <ul class="list-menu list-menu--inline" role="list"><li><a href="https://shophomegoods.co/" class="header__menu-item list-menu__item link link--text focus-inset">
                     <span>Home</span>
@@ -1552,7 +1552,7 @@ Item added to your cart</h2>
                 </li> -->
               </ul>
           </div><div class="footer__copyright caption">
-          <small class="copyright__content"><a href="https://storeify.works/" title="Storeify Works">Storeify Works</a>© 2023,  All Rights Reserved </small>
+          <small class="copyright__content"><a href="{{ request.build_absolute_uri }}" title="Storeify Works">Storeify Works</a>© 2023,  All Rights Reserved </small>
         </div>
       </div>
     </div>
