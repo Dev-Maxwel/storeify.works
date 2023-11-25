@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -87,18 +88,19 @@ DATABASES = {
     }
 }
 
-# # #liveserver database
-# DATABASES = {
-#     'default': {
-#     'ENGINE': 'django.db.backends.mysql',
-#     'NAME': 'mkhansof_m-khan softwebs db',
-#     'USER': config("DBUSER"),
-#     'PASSWORD': config("DBPASSWORD"),
-#     'HOST': 'localhost',
-#     'PORT': '3306',
-#     'OPTIONS': {
-#     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-# }}}
+
+# #liveserver database
+DATABASES = {
+    'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'mkhansof_m-khan softwebs db',
+    'USER': config("DBUSER"),
+    'PASSWORD': config("DBPASSWORD"),
+    'HOST': 'localhost',
+    'PORT': '3306',
+    'OPTIONS': {
+    'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+}}}
 
 
 
