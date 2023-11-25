@@ -45,13 +45,14 @@
   <meta name="twitter:description" content="Protect your fingers from knife cuts while preparing food! Finger Guard keeps your fingers safe from sharp knives and prevents injuries when slicing and dicing. It comes with an adjustable finger sleeve design that fits most fingers. It&#39;s small and light. You won&#39;t feel any weight on your hands, and it&#39;s very easy to u">
 
 
-  <link rel="icon" href="{% static 'store1\images\favicon.ico' %}" sizes="32x32">
-  <link rel="icon" href="{% static 'store1\images\favicon.ico' %}" sizes="192x192">
-  <link rel="apple-touch-icon" href="{% static 'store1\images\favicon.ico' %}">
-  <meta name="msapplication-TileImage" content="{% static 'store1\images\favicon.ico' %}">
+  <link rel="icon" href="{% static 'store1\images\favicon.ico' %}" type="image/x-icon" sizes="32x32">
+  <link rel="icon" href="{% static 'store1\images\favicon.ico' %}" type="image/x-icon" sizes="192x192">
+  <link rel="apple-touch-icon" href="{% static 'store1\images\favicon.ico' %}" type="image/x-icon">
+  <meta name="msapplication-TileImage" content="{% static 'store1\images\favicon.ico' %}" type="image/x-icon">
 
 
-  <script type="text/javascript" async="" src="./index_files/trekkie.storefront.f33399a7b9d8c1007209860fbdd63bb24633ae9f.min.js.download"></script><script src="./index_files/global.js.download" defer="defer"></script>
+  <script type="text/javascript" async="" src="{% static 'store1\js\trekkie.storefront.f33399a7b9d8c1007209860fbdd63bb24633ae9f.min.js.download' %}"></script>
+  <script src="{% static 'store1\js\global.js.download' %}" defer="defer"></script>
   <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/67816554769/digital_wallets/dialog">
   <meta name="shopify-checkout-api-token" content="05cb69f5da7a38c4d35ec4fed3404e92">
   <meta id="in-context-paypal-metadata" data-shop-id="67816554769" data-venmo-supported="true" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
@@ -74,9 +75,9 @@ Shopify.routes.root = "/";</script>
 <script id="__st">var __st={"a":67816554769,"offset":-25200,"reqid":"0930d722-effd-4d01-a436-5ae610194d0f","pageurl":"shophomegoods.co\/products\/finger-guard-stainless-steel","u":"43daa2d67fb1","p":"product","rtyp":"product","rid":8000849608977};</script>
 <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
 <script>!function(o){o.addEventListener("DOMContentLoaded",function(){window.Shopify=window.Shopify||{},window.Shopify.recaptchaV3=window.Shopify.recaptchaV3||{siteKey:"6LcCR2cUAAAAANS1Gpq_mDIJ2pQuJphsSQaUEuc9"};var t=['form[action*="/contact"] input[name="form_type"][value="contact"]','form[action*="/comments"] input[name="form_type"][value="new_comment"]','form[action*="/account"] input[name="form_type"][value="customer_login"]','form[action*="/account"] input[name="form_type"][value="recover_customer_password"]','form[action*="/account"] input[name="form_type"][value="create_customer"]','form[action*="/contact"] input[name="form_type"][value="customer"]'].join(",");function n(e){e=e.target;null==e||null!=(e=function e(t,n){if(null==t.parentElement)return null;if("FORM"!=t.parentElement.tagName)return e(t.parentElement,n);for(var o=t.parentElement.action,r=0;r<n.length;r++)if(-1!==o.indexOf(n[r]))return t.parentElement;return null}(e,["/contact","/comments","/account"]))&&null!=e.querySelector(t)&&((e=o.createElement("script")).setAttribute("src","https://cdn.shopify.com/shopifycloud/storefront-recaptcha-v3/v0.6/index.js"),o.body.appendChild(e),o.removeEventListener("focus",n,!0),o.removeEventListener("change",n,!0),o.removeEventListener("click",n,!0))}o.addEventListener("click",n,!0),o.addEventListener("change",n,!0),o.addEventListener("focus",n,!0)})}(document);</script>
-<script integrity="sha256-h4dvokWvGcvRSqiG7VnGqoonxF0k3NeoHPLSMjUGIz4=" data-source-attribution="shopify.loadfeatures" defer="defer" src="./index_files/load_feature-87876fa245af19cbd14aa886ed59c6aa8a27c45d24dcd7a81cf2d2323506233e.js.download" crossorigin="anonymous"></script>
-<script integrity="sha256-HAs5a9TQVLlKuuHrahvWuke+s1UlxXohfHeoYv8G2D8=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="./index_files/features-1c0b396bd4d054b94abae1eb6a1bd6ba47beb35525c57a217c77a862ff06d83f.js.download" crossorigin="anonymous"></script>
-<script id="sections-script" data-sections="header,footer" defer="defer" src="./index_files/scripts.js.download"></script>
+<script integrity="sha256-h4dvokWvGcvRSqiG7VnGqoonxF0k3NeoHPLSMjUGIz4=" data-source-attribution="shopify.loadfeatures" defer="defer" src="{% static 'store1\js\load_feature-87876fa245af19cbd14aa886ed59c6aa8a27c45d24dcd7a81cf2d2323506233e.js.download' %}" crossorigin="anonymous"></script>
+<script integrity="sha256-HAs5a9TQVLlKuuHrahvWuke+s1UlxXohfHeoYv8G2D8=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="{% static 'store1\js\features-1c0b396bd4d054b94abae1eb6a1bd6ba47beb35525c57a217c77a862ff06d83f.js.download' %}" crossorigin="anonymous"></script>
+<script id="sections-script" data-sections="header,footer" defer="defer" src="{% static 'store1\js\scripts.js.download' %}"></script>
 
 <style id="shopify-dynamic-checkout-cart">@media screen and (min-width: 750px) {
   #dynamic-checkout-cart {
@@ -320,177 +321,10 @@ Shopify.routes.root = "/";</script>
     }
     </script>
   <link href="https://monorail-edge.shopifysvc.com/" rel="dns-prefetch">
-<script>(function(){if ("sendBeacon" in navigator && "performance" in window) {var session_token = document.cookie.match(/_shopify_s=([^;]*)/);function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 67816554769,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token: session_token && session_token.length === 2 ? session_token[1] : "",page_type: "product"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
-<script id="web-pixels-manager-setup">(function e(e,n,a,t,o,r,i){var s=null!==e,l=("function"==typeof BigInt&&BigInt.toString().indexOf("[native code]")?"modern":"legacy").substring(0,1),c=t.substring(0,1);if(s){window.Shopify=window.Shopify||{};var d=window.Shopify;d.analytics=d.analytics||{};var u=d.analytics;u.replayQueue=[],u.publish=function(e,n,a){u.replayQueue.push([e,n,a])};try{self.performance.mark("wpm:start")}catch(e){}}var p,f,y,h,v,m,w,g,b,_=[a,"/wpm","/",c,r,l,".js"].join("");f=(p={src:_,async:!0,onload:function(){if(e){var a=window.webPixelsManager.init(e);null==n||n(a);var t=window.Shopify.analytics;t.replayQueue.forEach((function(e){var n=e[0],t=e[1],o=e[2];a.publishCustomEvent(n,t,o)})),t.replayQueue=[],t.publish=a.publishCustomEvent,t.visitor=a.visitor}},onerror:function(){var n=(null==e?void 0:e.storefrontBaseUrl)?e.storefrontBaseUrl.replace(/\/$/,""):self.location.origin,a="".concat(n,"/.well-known/shopify/monorail/unstable/produce_batch"),t=JSON.stringify({metadata:{event_sent_at_ms:(new Date).getTime()},events:[{schema_id:"web_pixels_manager_load/2.0",payload:{version:o||"latest",page_url:self.location.href,status:"failed",error_msg:"".concat(_," has failed to load")},metadata:{event_created_at_ms:(new Date).getTime()}}]});try{if(self.navigator.sendBeacon.bind(self.navigator)(a,t))return!0}catch(e){}var r=new XMLHttpRequest;try{return r.open("POST",a,!0),r.setRequestHeader("Content-Type","text/plain"),r.send(t),!0}catch(e){console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging a load error.")}return!1}}).src,y=p.async,h=void 0===y||y,v=p.onload,m=p.onerror,w=document.createElement("script"),g=document.head,b=document.body,w.async=h,w.src=f,v&&w.addEventListener("load",v),m&&w.addEventListener("error",m),g?g.appendChild(w):b?b.appendChild(w):console.error("Did not find a head or body element to append the script")})({shopId: 67816554769,storefrontBaseUrl: "https://shophomegoods.co",cdnBaseUrl: "https://shophomegoods.co/cdn",surface: "storefront-renderer",enabledBetaFlags: ["web_pixels_async_pixel_refactor","web_pixels_visitor_api","web_pixels_manager_performance_improvement"],webPixelsConfigList: [{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0570","apiClientId":"shopify-pixel","type":"APP"},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0570","apiClientId":"shopify-pixel","type":"CUSTOM"}],initData: {"cart":null,"checkout":null,"customer":null,"productVariants":[{"id":"43729975279889","image":{"src":"\/\/shophomegoods.co\/cdn\/shop\/products\/6_00657256-3590-4c96-9b70-fd428dcf5655.jpg?v=1668022707"},"price":{"amount":11.0,"currencyCode":"USD"},"product":{"id":"8000849608977","title":"Finger Guard Stainless Steel","untranslatedTitle":"Finger Guard Stainless Steel","url":"\/products\/finger-guard-stainless-steel","vendor":"homieteddy","type":""},"sku":"TC-FingerGuard-1pc-1","title":"1pc","untranslatedTitle":"1pc"},{"id":"43729975312657","image":{"src":"\/\/shophomegoods.co\/cdn\/shop\/products\/2_2e4f1a1a-8d11-4eec-bc63-5f55dc64e7a4.jpg?v=1668022707"},"price":{"amount":13.0,"currencyCode":"USD"},"product":{"id":"8000849608977","title":"Finger Guard Stainless Steel","untranslatedTitle":"Finger Guard Stainless Steel","url":"\/products\/finger-guard-stainless-steel","vendor":"homieteddy","type":""},"sku":"TC-FingerGuard-3pc","title":"3pcs","untranslatedTitle":"3pcs"}]},},function pageEvents(webPixelsManagerAPI) {webPixelsManagerAPI.publish("page_viewed");webPixelsManagerAPI.publish("product_viewed", {"productVariant":{"id":"43729975279889","image":{"src":"\/\/shophomegoods.co\/cdn\/shop\/products\/6_00657256-3590-4c96-9b70-fd428dcf5655.jpg?v=1668022707"},"price":{"amount":11.0,"currencyCode":"USD"},"product":{"id":"8000849608977","title":"Finger Guard Stainless Steel","untranslatedTitle":"Finger Guard Stainless Steel","url":"\/products\/finger-guard-stainless-steel","vendor":"homieteddy","type":""},"sku":"TC-FingerGuard-1pc-1","title":"1pc","untranslatedTitle":"1pc"}});},"https://shophomegoods.co/cdn","browser","0.0.404","a9733732w152bc0c4p2b177b68md647b1e6",["web_pixels_async_pixel_refactor","web_pixels_visitor_api","web_pixels_manager_performance_improvement"]);</script><script async="" src="./index_files/ba9733732w152bc0c4p2b177b68md647b1e6m.js.download"></script>  <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
-window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
-window.ShopifyAnalytics.meta.currency = 'USD';
-var meta = {"product":{"id":8000849608977,"gid":"gid:\/\/shopify\/Product\/8000849608977","vendor":"homieteddy","type":"","variants":[{"id":43729975279889,"price":1100,"name":"Finger Guard Stainless Steel - 1pc","public_title":"1pc","sku":"TC-FingerGuard-1pc-1"},{"id":43729975312657,"price":1300,"name":"Finger Guard Stainless Steel - 3pcs","public_title":"3pcs","sku":"TC-FingerGuard-3pc"}]},"page":{"pageType":"product","resourceType":"product","resourceId":8000849608977}};
-for (var attr in meta) {
-  window.ShopifyAnalytics.meta[attr] = meta[attr];
-}</script>
-<script>window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
-  
-};
-</script>
-<script class="analytics">(function () {
-    var customDocumentWrite = function(content) {
-      var jquery = null;
-
-      if (window.jQuery) {
-        jquery = window.jQuery;
-      } else if (window.Checkout && window.Checkout.$) {
-        jquery = window.Checkout.$;
-      }
-
-      if (jquery) {
-        jquery('body').append(content);
-      }
-    };
-
-    var hasLoggedConversion = function(token) {
-      if (token) {
-        return document.cookie.indexOf('loggedConversion=' + token) !== -1;
-      }
-      return false;
-    }
-
-    var setCookieIfConversion = function(token) {
-      if (token) {
-        var twoMonthsFromNow = new Date(Date.now());
-        twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
-
-        document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
-      }
-    }
-
-    var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
-    if (trekkie.integrations) {
-      return;
-    }
-    trekkie.methods = [
-      'identify',
-      'page',
-      'ready',
-      'track',
-      'trackForm',
-      'trackLink'
-    ];
-    trekkie.factory = function(method) {
-      return function() {
-        var args = Array.prototype.slice.call(arguments);
-        args.unshift(method);
-        trekkie.push(args);
-        return trekkie;
-      };
-    };
-    for (var i = 0; i < trekkie.methods.length; i++) {
-      var key = trekkie.methods[i];
-      trekkie[key] = trekkie.factory(key);
-    }
-    trekkie.load = function(config) {
-      trekkie.config = config || {};
-      trekkie.config.initialDocumentCookie = document.cookie;
-      var first = document.getElementsByTagName('script')[0];
-      var script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.onerror = function(e) {
-        var scriptFallback = document.createElement('script');
-        scriptFallback.type = 'text/javascript';
-        scriptFallback.onerror = function(error) {
-                var Monorail = {
-      produce: function produce(monorailDomain, schemaId, payload) {
-        var currentMs = new Date().getTime();
-        var event = {
-          schema_id: schemaId,
-          payload: payload,
-          metadata: {
-            event_created_at_ms: currentMs,
-            event_sent_at_ms: currentMs
-          }
-        };
-        return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
-      },
-      sendRequest: function sendRequest(endpointUrl, payload) {
-        // Try the sendBeacon API
-        if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' && typeof window.Blob === 'function' && !Monorail.isIos12()) {
-          var blobData = new window.Blob([payload], {
-            type: 'text/plain'
-          });
-
-          if (window.navigator.sendBeacon(endpointUrl, blobData)) {
-            return true;
-          } // sendBeacon was not successful
-
-        } // XHR beacon
-
-        var xhr = new XMLHttpRequest();
-
-        try {
-          xhr.open('POST', endpointUrl);
-          xhr.setRequestHeader('Content-Type', 'text/plain');
-          xhr.send(payload);
-        } catch (e) {
-          console.log(e);
-        }
-
-        return false;
-      },
-      isIos12: function isIos12() {
-        return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
-      }
-    };
-    Monorail.produce('monorail-edge.shopifysvc.com',
-      'trekkie_storefront_load_errors/1.1',
-      {shop_id: 67816554769,
-      theme_id: 137716334865,
-      app_name: "storefront",
-      context_url: window.location.href,
-      source_url: "//shophomegoods.co/cdn/s/trekkie.storefront.f33399a7b9d8c1007209860fbdd63bb24633ae9f.min.js"});
-
-        };
-        scriptFallback.async = true;
-        scriptFallback.src = '//shophomegoods.co/cdn/s/trekkie.storefront.f33399a7b9d8c1007209860fbdd63bb24633ae9f.min.js';
-        first.parentNode.insertBefore(scriptFallback, first);
-      };
-      script.async = true;
-      script.src = '//shophomegoods.co/cdn/s/trekkie.storefront.f33399a7b9d8c1007209860fbdd63bb24633ae9f.min.js';
-      first.parentNode.insertBefore(script, first);
-    };
-    trekkie.load(
-      {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":67816554769,"isMerchantRequest":null,"themeId":137716334865,"themeCityHash":"2177949784771466556","contentLanguage":"en","currency":"USD"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain"},"Session Attribution":{},"S2S":{"facebookCapiEnabled":false,"source":"trekkie-storefront-renderer"}}
-    );
-
-    var loaded = false;
-    trekkie.ready(function() {
-      if (loaded) return;
-      loaded = true;
-
-      window.ShopifyAnalytics.lib = window.trekkie;
-
-  
-      var originalDocumentWrite = document.write;
-      document.write = customDocumentWrite;
-      try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
-      document.write = originalDocumentWrite;
-
-      window.ShopifyAnalytics.lib.page(null,{"pageType":"product","resourceType":"product","resourceId":8000849608977});
-
-      var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
-      var token = match? match[1]: undefined;
-      if (!hasLoggedConversion(token)) {
-        setCookieIfConversion(token);
-        window.ShopifyAnalytics.lib.track("Viewed Product",{"currency":"USD","variantId":43729975279889,"productId":8000849608977,"productGid":"gid:\/\/shopify\/Product\/8000849608977","name":"Finger Guard Stainless Steel - 1pc","price":"11.00","sku":"TC-FingerGuard-1pc-1","brand":"homieteddy","variant":"1pc","category":"","nonInteraction":true});
-      window.ShopifyAnalytics.lib.track("monorail:\/\/trekkie_storefront_viewed_product\/1.1",{"currency":"USD","variantId":43729975279889,"productId":8000849608977,"productGid":"gid:\/\/shopify\/Product\/8000849608977","name":"Finger Guard Stainless Steel - 1pc","price":"11.00","sku":"TC-FingerGuard-1pc-1","brand":"homieteddy","variant":"1pc","category":"","nonInteraction":true,"referer":"https:\/\/shophomegoods.co\/products\/finger-guard-stainless-steel"});
-      }
-    });
 
 
-        var eventsListenerScript = document.createElement('script');
-        eventsListenerScript.async = true;
-        eventsListenerScript.src = "//shophomegoods.co/cdn/shopifycloud/shopify/assets/shop_events_listener-a7c63dba65ccddc484f77541dc8ca437e60e1e9e297fe1c3faebf6523a0ede9b.js";
-        document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+<script async="" src="{% static 'store1\js\shop_events_listener-a7c63dba65ccddc484f77541dc8ca437e60e1e9e297fe1c3faebf6523a0ede9b.js.download' %}"></script>
 
-})();</script><script async="" src="./index_files/shop_events_listener-a7c63dba65ccddc484f77541dc8ca437e60e1e9e297fe1c3faebf6523a0ede9b.js.download"></script>
 <script class="boomerang">
 (function () {
   if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
@@ -636,8 +470,9 @@ for (var attr in meta) {
     });
   }
 })();</script>
-<link href="./index_files/shopify-boomerang-1.0.0.min.js.download" rel="preload" as="script">
-<script id="boomr-scr-as" src="./index_files/shopify-boomerang-1.0.0.min.js.download" async=""></script>
+
+<link href="{% static 'store1\js\shopify-boomerang-1.0.0.min.js.download' %}" rel="preload" as="script">
+<script id="boomr-scr-as" src="{% static 'store1\js\shopify-boomerang-1.0.0.min.js.download' %}" async=""></script>
 <link rel="dns-prefetch preconnect" href="https://shophomegoods.co/products/h" crossorigin="">
 <link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/runtime.latest.en.2acd1ca4f13a0ed2f25a.js" crossorigin="">
 <link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/199.latest.en.17804cd5078a63a43afb.js" crossorigin="">
@@ -675,14 +510,15 @@ for (var attr in meta) {
   <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="https://shophomegoods.co/products/finger-guard-stainless-steel#MainContent">
       Skip to content
-    </a><div id="shopify-section-announcement-bar" class="shopify-section"><div class="announcement-bar color-accent-2 gradient" role="region" aria-label="Announcement"><div class="page-width">
-                <p class="announcement-bar__message center h5">
-                  FREE Shipping On All Orders
-</p>
-              </div></div>
-</div>
-    <div id="shopify-section-header" class="shopify-section section-header">
-      <link rel="stylesheet" href="{% static 'store1\css\component-list-menu.css' %}" media="all" onload="this.media=&#39;all&#39;">
+    </a>
+    <div id="shopify-section-announcement-bar" class="shopify-section"><div class="announcement-bar color-accent-2 gradient" role="region" aria-label="Announcement">
+      <div class="page-width">
+        <p class="announcement-bar__message center h5">FREE Shipping On All Orders</p>
+      </div></div>
+    </div>
+
+<div id="shopify-section-header" class="shopify-section section-header">
+<link rel="stylesheet" href="{% static 'store1\css\component-list-menu.css' %}" media="all" onload="this.media=&#39;all&#39;">
 <link rel="stylesheet" href="{% static 'store1\css\component-search.css' %}" media="all" onload="this.media=&#39;all&#39;">
 <link rel="stylesheet" href="{% static 'store1\css\component-menu-drawer.css' %}" media="all" onload="this.media=&#39;all&#39;">
 <link rel="stylesheet" href="{% static 'store1\css\component-cart-notification.css' %}" media="all" onload="this.media=&#39;all&#39;">
@@ -769,9 +605,9 @@ for (var attr in meta) {
       padding-top: 20px;
       padding-bottom: 20px;
     }
-  }</style><script src="./index_files/details-disclosure.js.download" defer="defer"></script>
-<script src="./index_files/details-modal.js.download" defer="defer"></script>
-<script src="./index_files/cart-notification.js.download" defer="defer"></script><svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+  }</style><script src="{% static 'store1\js\details-disclosure.js.download' %}" defer="defer"></script>
+<script src="{% static 'store1\js\details-modal.js.download' %}" defer="defer"></script>
+<script src="{% static 'store1\js\cart-notification.js.download' %}" defer="defer"></script><svg xmlns="http://www.w3.org/2000/svg" class="hidden">
   <symbol id="icon-search" viewBox="0 0 18 19" fill="none">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" fill="currentColor"></path>
   </symbol>
@@ -901,29 +737,6 @@ Item added to your cart</h2>
   }
 </style>
 
-
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "name": "HomeGoods",
-    
-      "logo": "https:\/\/shophomegoods.co\/cdn\/shop\/files\/sunwazee_2.png?v=1669826188\u0026width=400",
-    
-    "sameAs": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "url": "https:\/\/shophomegoods.co"
-  }
-</script>
 </div>
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       <section id="shopify-section-template--16867802743057__main" class="shopify-section section"><section id="MainProduct-template--16867802743057__main" class="page-width section-template--16867802743057__main-padding" data-section="template--16867802743057__main">
@@ -945,7 +758,8 @@ Item added to your cart</h2>
         padding-top: 36px;
         padding-bottom: 12px;
       }
-    }</style><script src="./index_files/product-form.js.download" defer="defer"></script><div class="product product--large product--left product--stacked product--mobile-hide grid grid--1-col grid--2-col-tablet">
+    }</style>
+    <script src="{% static 'store1\js\product-form.js.download' %}" defer="defer"></script><div class="product product--large product--left product--stacked product--mobile-hide grid grid--1-col grid--2-col-tablet">
     <div class="grid__item product__media-wrapper">
       <media-gallery id="MediaGallery-template--16867802743057__main" role="region" class="product__media-gallery" aria-label="Gallery Viewer" data-desktop-layout="stacked">
         <div id="GalleryStatus-template--16867802743057__main" class="visually-hidden" role="status"></div>
@@ -1077,9 +891,7 @@ Item added to your cart</h2>
                           </label><input type="radio" id="template--16867802743057__main-1-1" name="Protect Your Finger" value="3pcs" form="product-form-template--16867802743057__main">
                           <label for="template--16867802743057__main-1-1">
                             3pcs
-                          </label></fieldset><script type="application/json">
-                      [{"id":43729975279889,"title":"1pc","option1":"1pc","option2":null,"option3":null,"sku":"TC-FingerGuard-1pc-1","requires_shipping":true,"taxable":true,"featured_image":{"id":39841896104209,"product_id":8000849608977,"position":1,"created_at":"2022-11-09T12:38:27-07:00","updated_at":"2022-11-09T12:38:27-07:00","alt":null,"width":900,"height":900,"src":"\/\/shophomegoods.co\/cdn\/shop\/products\/6_00657256-3590-4c96-9b70-fd428dcf5655.jpg?v=1668022707","variant_ids":[43729975279889]},"available":true,"name":"Finger Guard Stainless Steel - 1pc","public_title":"1pc","options":["1pc"],"price":1100,"weight":0,"compare_at_price":5500,"inventory_management":null,"barcode":null,"featured_media":{"alt":null,"id":32165360107793,"position":1,"preview_image":{"aspect_ratio":1.0,"height":900,"width":900,"src":"\/\/shophomegoods.co\/cdn\/shop\/products\/6_00657256-3590-4c96-9b70-fd428dcf5655.jpg?v=1668022707"}}},{"id":43729975312657,"title":"3pcs","option1":"3pcs","option2":null,"option3":null,"sku":"TC-FingerGuard-3pc","requires_shipping":true,"taxable":true,"featured_image":{"id":39841896136977,"product_id":8000849608977,"position":2,"created_at":"2022-11-09T12:38:27-07:00","updated_at":"2022-11-09T12:38:27-07:00","alt":null,"width":900,"height":900,"src":"\/\/shophomegoods.co\/cdn\/shop\/products\/2_2e4f1a1a-8d11-4eec-bc63-5f55dc64e7a4.jpg?v=1668022707","variant_ids":[43729975312657]},"available":true,"name":"Finger Guard Stainless Steel - 3pcs","public_title":"3pcs","options":["3pcs"],"price":1300,"weight":0,"compare_at_price":6500,"inventory_management":null,"barcode":null,"featured_media":{"alt":null,"id":32165360140561,"position":2,"preview_image":{"aspect_ratio":1.0,"height":900,"width":900,"src":"\/\/shophomegoods.co\/cdn\/shop\/products\/2_2e4f1a1a-8d11-4eec-bc63-5f55dc64e7a4.jpg?v=1668022707"}}}]
-                    </script>
+                          </label></fieldset>
                   </variant-radios><noscript class="product-form__noscript-wrapper-template--16867802743057__main">
                 <div class="product-form__input">
                   <label class="form__label" for="Variants-template--16867802743057__main">Product variants</label>
@@ -1164,7 +976,7 @@ Item added to your cart</h2>
                 </pickup-availability>
               </div>
 
-              <script src="./index_files/pickup-availability.js.download" defer="defer"></script><div class="product__description rte quick-add-hidden">
+              <script src="{% static 'store1\js\pickup-availability.js.download' %}" defer="defer"></script><div class="product__description rte quick-add-hidden">
                   <div style="background-color: #ecfac2;">
 <h3><span style="color: #7b0a22;">Protect your fingers from knife cuts while preparing food!</span></h3>
 <p><span style="color: #303f07;"><img src="./index_files/giphy.gif" data-mce-fragment="1" data-mce-src="https://media.giphy.com/media/tkSQLAfgKVKpte6IMM/giphy.gif"></span><br data-mce-fragment="1"><span style="color: #303f07;">Finger Guard keeps your fingers safe from sharp knives and <strong>prevents injuries when slicing and dicing</strong>. It comes with an adjustable finger sleeve design that fits most fingers. It's small and light. You won't feel any weight on your hands, and it's very easy to use for long-term use. </span><br data-mce-fragment="1"><span style="color: #303f07;"><img src="./index_files/giphy(1).gif" data-mce-fragment="1" data-mce-src="https://media.giphy.com/media/cC3szdkNdZ1ORuW234/giphy.gif"></span><br data-mce-fragment="1"><span style="color: #303f07;"><span style="color: #7b0a22;"><strong>Finger Protection:</strong></span> <strong>Protect your fingers from sharp knives</strong> when preparing food. This specially designed finger guard is a wonderful tool to <strong>prevent yourself from getting cut in the kitchen</strong>.</span><br data-mce-fragment="1"><span style="color: #303f07;"><span style="color: #7b0a22;"><strong>Adjustable Size:</strong></span> The size of finger shield with <strong>open loop design</strong> can be easily adjusted. <strong>Suitable for most fingers</strong> and for both left and right handed use.</span><br data-mce-fragment="1"><span style="color: #303f07;"><span style="color: #7b0a22;"><strong>Premium Material:</strong></span> Made of high-quality carbon steel material, ergonomic design for better protection and <strong>smooth edges for safe use</strong>.</span><br data-mce-fragment="1"><span style="color: #303f07;"><span style="color: #7b0a22;"><strong>Easy to Use:</strong> </span>You don't have to be a professional to use it. Just insert your middle finger and keep others behind of the protector. The back ring can be adjusted to fit your fingers.</span><br data-mce-fragment="1"><span style="color: #303f07;"><img src="./index_files/4_480x480.jpg" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0521/8310/5717/products/4_480x480.jpg?v=1623315653"></span><br data-mce-fragment="1"><span style="color: #7b0a22;"><strong>SPECIFICATION:</strong></span><br data-mce-fragment="1"><span style="color: #303f07;"><strong>Material:</strong> Stainless Steel</span><br data-mce-fragment="1"><span style="color: #303f07;"><strong>Size:</strong> 2.6 x 1.8 x 0.78 inches </span><br data-mce-fragment="1"><span style="color: #303f07;"><strong>Color:</strong> Silver</span><br data-mce-fragment="1"><span style="color: #7b0a22;"><strong>PACKAGE INCLUDES:</strong></span><br data-mce-fragment="1"><span style="color: #303f07;">1/ 3 x Finger Guard Stainless Steel</span></p>
@@ -1215,7 +1027,7 @@ Item added to your cart</h2>
                   </div>
                 </details>
               </share-button>
-              <script src="./index_files/share.js.download" defer="defer"></script><a href="https://shophomegoods.co/products/finger-guard-stainless-steel" class="link product__view-details animate-arrow">
+              <script src="{% static 'store1\js\share.js.download' %}" defer="defer"></script><a href="https://shophomegoods.co/products/finger-guard-stainless-steel" class="link product__view-details animate-arrow">
           View full details
           <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
@@ -1228,8 +1040,8 @@ Item added to your cart</h2>
   
 
   
-<script src="./index_files/product-modal.js.download" defer="defer"></script>
-    <script src="./index_files/media-gallery.js.download" defer="defer"></script><script>
+<script src="{% static 'store1\js\product-modal.js.download' %}" defer="defer"></script>
+    <script src="{% static 'store1\js\media-gallery.js.download' %}" defer="defer"></script><script>
     document.addEventListener('DOMContentLoaded', function() {
       function isIE() {
         const ua = window.navigator.userAgent;
@@ -1731,15 +1543,16 @@ Item added to your cart</h2>
       <div class="footer__column footer__localization isolate"></div>
       <div class="footer__column footer__column--info"><div class="footer__payment">
             <span class="visually-hidden">Payment methods</span>
-            <ul class="list list-payment" role="list"><li class="list-payment__item">
-                  <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
-                </li><li class="list-payment__item">
+              <ul class="list list-payment" role="list">
+                <li class="list-payment__item">
+                    <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path></svg>
+                  </li>
+                <!-- <li class="list-payment__item">
                   <svg class="icon icon--full-color" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pi-venmo"><title id="pi-venmo">Venmo</title><g fill="none" fill-rule="evenodd"><rect fill-opacity=".07" fill="#000" width="38" height="24" rx="3"></rect><path fill="#3D95CE" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path d="M24.675 8.36c0 3.064-2.557 7.045-4.633 9.84h-4.74L13.4 6.57l4.151-.402 1.005 8.275c.94-1.566 2.099-4.025 2.099-5.702 0-.918-.154-1.543-.394-2.058l3.78-.783c.437.738.634 1.499.634 2.46z" fill="#FFF" fill-rule="nonzero"></path></g></svg>
-
-                </li></ul>
+                </li> -->
+              </ul>
           </div><div class="footer__copyright caption">
-          <small class="copyright__content">© 2023, <a href="https://shophomegoods.co/" title="">HomeGoods</a></small>
-          <small class="copyright__content"><a target="_blank" rel="nofollow" href="https://www.shopify.com/?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">Powered by Shopify</a></small>
+          <small class="copyright__content"><a href="https://storeify.works/" title="Storeify Works">Storeify Works</a>© 2023,  All Rights Reserved </small>
         </div>
       </div>
     </div>
@@ -1783,7 +1596,7 @@ Item added to your cart</h2>
         pauseSlideshow: `Pause slideshow`,
         playSlideshow: `Play slideshow`,
       }
-    </script><script src="./index_files/predictive-search.js.download" defer="defer"></script>
+    </script><script src="{% static 'store1\js\predictive-search.js.download' %}" defer="defer"></script>
 
 <product-modal id="ProductModal-template--16867802743057__main" class="product-media-modal media-modal">
     <div class="product-media-modal__dialog" role="dialog" aria-label="Media gallery" aria-modal="true" tabindex="-1">

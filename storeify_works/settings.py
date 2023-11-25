@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
+    'hitcount',
     "dashboard",
+    
 ]
 
 MIDDLEWARE = [
