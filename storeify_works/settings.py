@@ -161,14 +161,16 @@ STORAGES = {
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
-#mdedia configurations
-MEDIA_URL = '/storeifyworks_mediaCDN/'
-MEDIA_DIR = BASE_DIR / '/storeifyworks_mediaCDN'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'storeifyworks_mediaCDN')
+#media configurations
+MEDIA_URL = '/mediaCDN/'
+MEDIA_DIR = BASE_DIR / 'mediaCDN'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediaCDN')
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
 
 
 

@@ -585,7 +585,9 @@ Shopify.routes.root = "/";</script>
       padding-top: 0.5rem;
     }
   }
-</style><style data-shopify="">.header {
+</style>
+
+<style data-shopify="">.header {
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -605,7 +607,8 @@ Shopify.routes.root = "/";</script>
       padding-top: 20px;
       padding-bottom: 20px;
     }
-  }</style><script src="{% static 'store1\js\details-disclosure.js.download' %}" defer="defer"></script>
+  }</style>
+  <script src="{% static 'store1\js\details-disclosure.js.download' %}" defer="defer"></script>
 <script src="{% static 'store1\js\details-modal.js.download' %}" defer="defer"></script>
 <script src="{% static 'store1\js\cart-notification.js.download' %}" defer="defer"></script><svg xmlns="http://www.w3.org/2000/svg" class="hidden">
   <symbol id="icon-search" viewBox="0 0 18 19" fill="none">
@@ -635,13 +638,17 @@ Shopify.routes.root = "/";</script>
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
                 <nav class="menu-drawer__navigation">
-                  <ul class="menu-drawer__menu has-submenu list-menu" role="list"><li><a href="https://shophomegoods.co/" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
-                            Home
-                          </a></li><li><a href="https://shophomegoods.co/collections/all" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
-                            Catalog
-                          </a></li><li><a href="https://shophomegoods.co/pages/contact" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
-                            Contact
-                          </a></li></ul>
+                  <ul class="menu-drawer__menu has-submenu list-menu" role="list">
+                        <li>
+                          <a href="{{ request.build_absolute_uri }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">Home</a>
+                        </li>
+                        <li>
+                          <a href="https://shophomegoods.co/collections/all" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">Catalog</a>
+                        </li>
+                        <li>
+                          <a href="https://shophomegoods.co/pages/contact" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">Contact</a>
+                        </li>
+                    </ul>
                 </nav>
                 <div class="menu-drawer__utility-links"><ul class="list list-social list-unstyled" role="list"></ul>
                 </div>
@@ -652,7 +659,7 @@ Shopify.routes.root = "/";</script>
       </header-drawer><a href="{{ request.build_absolute_uri }}" class="header__heading-link link link--text focus-inset">
         <img src="{% static 'store1\images\logo-no-bg.png' %}" alt="HomeGoods" width="150" height="37.5" class="header__heading-logo">
 </a><nav class="header__inline-menu">
-          <ul class="list-menu list-menu--inline" role="list"><li><a href="https://shophomegoods.co/" class="header__menu-item list-menu__item link link--text focus-inset">
+          <ul class="list-menu list-menu--inline" role="list"><li><a href="{{ request.build_absolute_uri }}" class="header__menu-item list-menu__item link link--text focus-inset">
                     <span>Home</span>
                   </a></li><li><a href="https://shophomegoods.co/collections/all" class="header__menu-item list-menu__item link link--text focus-inset">
                     <span>Catalog</span>

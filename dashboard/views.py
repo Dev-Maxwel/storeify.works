@@ -1,11 +1,15 @@
 from django.shortcuts import render, redirect
-from .models import emailMarketing
+from .models import imageControls
 from .forms import EmailMarketingForm
 
 # Create your views here.
 
 def index(request):
-    return render(request, "store1/index.html")
+    images = imageControls.objects.all()
+    context={
+        images: "images"
+    }
+    return render(request, "store1/index.html", context)
 
 def success(request):
     if request.method == 'POST':
