@@ -140,12 +140,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 # static configurations
-STATIC_URL = 'storeifyworks_static/'
-
-# for live server
-# STATIC_URL = 'http://static.storeify.works/static'
-
-    
+STATIC_URL = 'storeifyworks_static/'   
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'storeifyworks_static'),]   
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 

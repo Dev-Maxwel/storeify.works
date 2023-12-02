@@ -1,3 +1,7 @@
+
+/* my main store colors */
+/* #ed9121 #eb9b94   #35d7ff  #003d7a #394d6d */
+
 :root,
 .color-background-1 {
     --color-foreground: var(--color-base-text);
@@ -301,14 +305,14 @@ html.no-js .no-js-hidden {
     }
 }
 
-body,
+
 .color-background-1,
 .color-background-2,
 .color-inverse,
 .color-accent-1,
 .color-accent-2 {
     color: rgba(var(--color-foreground), .75);
-    background-color: rgb(var(--color-background))
+    background-color: rgb(var(--color-background));
 }
 
 .background-secondary {
@@ -2741,15 +2745,23 @@ details-disclosure>details {
 }
 
 .gradient {
-    background: rgb(var(--color-background));
-    background: var(--gradient-background);
-    background-attachment: fixed
+    /* background: rgb(var(--color-background));
+    background: var(--gradient-background); */
+
+    background-image: url('/storeifyworks_static/store1/images/texture.jpg');
+    background-image: url('/storeifyworks_static/store1/images/texture.jpg'), linear-gradient(45deg, #f7f6f3 85%, #ed9121 15%);
+    background-repeat: repeat;
+    background-position: center; 
+    background-size: cover;
+    background-attachment: fixed;
 }
+
+/* #ed9121 #eb9b94   #35d7ff  #003d7a #394d6d */
 
 @media screen and (forced-colors: active) {
     .icon {
         color: CanvasText;
-        fill: CanvasText !important
+        fill: CanvasText !important;
     }
 
     .icon-close-small path {
@@ -2929,7 +2941,5 @@ details-disclosure>details {
 }
 
 /*# sourceMappingURL=/cdn/shop/t/3/assets/base.css.map?v=831047894957930821679967603 */
-
-
 
 

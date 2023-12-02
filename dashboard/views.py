@@ -9,7 +9,7 @@ def index(request):
     context={
         images: "images"
     }
-    return render(request, "store1/index.hta", context)
+    return render(request, "store1/index.html", context)
 
 def success(request):
     if request.method == 'POST':
