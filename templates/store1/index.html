@@ -1525,7 +1525,7 @@ Item added to your cart</h2>
     </ul>
 
     <script>
-      window.shopUrl = 'https://shophomegoods.co';
+      window.shopUrl = '{{ request.build_absolute_uri }}';
       window.routes = {
         cart_add_url: '/cart/add',
         cart_change_url: '/cart/change',
