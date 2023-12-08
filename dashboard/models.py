@@ -10,6 +10,13 @@ class emailMarketing(models.Model):
         return self.email
     class Meta:
         verbose_name_plural = 'emailMarketing'
+
+class urlRedirects(models.Model):
+    urlstring1 = models.TextField(blank=True, null=True)        
+    urlstring2 = models.TextField(blank=True, null=True)        
+    urlstring3 = models.TextField(blank=True, null=True)        
+    urlstring4 = models.TextField(blank=True, null=True)        
+    urlstring5 = models.TextField(blank=True, null=True)        
         
 class imageControls(models.Model):
     image1 = models.ImageField(upload_to="dashboard", height_field=None, width_field=None, max_length=None, blank=True, null=True, default="") 
