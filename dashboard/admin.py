@@ -5,3 +5,4 @@ from dashboard.models import *
 
 admin.site.register(emailMarketing)
 admin.site.register(imageControls)
+admin.site.register(urlRedirects)
