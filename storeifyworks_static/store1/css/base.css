@@ -743,7 +743,9 @@ details>* {
 }
 
 .icon-arrow {
-    width: 1.5rem
+    width: 12.5rem;
+    color: maroon;
+    border-color: #000;
 }
 
 h3 .icon-arrow,
