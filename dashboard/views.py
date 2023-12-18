@@ -11,6 +11,13 @@ def index(request):
     }
     return render(request, "store1/index.html", context)
 
+def catalogue(request):
+    images = imageControls.objects.all()
+    context={
+        images: "images"
+    }
+    return render(request, "store1/catalogue.html", context)
+
 def success(request):
     if request.method == 'POST':
         form = EmailMarketingForm(request.POST)
