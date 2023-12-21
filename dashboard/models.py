@@ -47,3 +47,6 @@ class imageControls(models.Model):
         return self.alt1
     class Meta:
         verbose_name_plural = 'imageControls'
+        
+class searchControl(models.Model):
+    query = models.TextField(blank=True, null=True)        

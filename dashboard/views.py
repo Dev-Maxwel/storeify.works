@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import imageControls
+from .models import imageControls, searchControl
 from .forms import EmailMarketingForm
 
 # Create your views here.
@@ -33,3 +33,7 @@ def success(request):
         
     context = {'form': form}
     return render(request, 'store1/success.html', context)
+
+def search(request):
+    results = searchControl.searchResults(request.POST)
+    
