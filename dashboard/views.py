@@ -35,5 +35,15 @@ def success(request):
     return render(request, 'store1/success.html', context)
 
 def search(request):
-    results = searchControl.searchResults(request.POST)
+    searchQuery = request.GET.get('q', '')
+    # results = searchControl.searchResults(request.POST) 
+    
+    #temporary testresults
+    # results = imageControls.description1
+    results= imageControls.objects.filter().order_by("?")
+    context = {
+        results: "results",     
+    }
+    return render(request, "store1/results.html", context)
+
     
