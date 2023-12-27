@@ -47,6 +47,11 @@ def search(request):
     return render(request, "store1/results.html", context)
 
 def signin(request):
+    if request.method == "POST":
+        email = request.post.get('email')
+        password = request.post.get('password')
+    else:
+        pass    
     return render (request, "shared/signin.html")
 
     
