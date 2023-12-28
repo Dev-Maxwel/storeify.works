@@ -46,11 +46,17 @@ class imageControls(models.Model):
     def __str__(self):
         return self.alt1
     class Meta:
-        verbose_name_plural = 'imageControls'
+        verbose_name_plural = 'imageControl'
         
 class searchControl(models.Model):
     query = models.TextField(blank=True, null=True)        
+    ip_address = models.TextField(blank=True, null=True)        
     
 class accountsControl(models.Model):
     email = models.EmailField(max_length=254)
     username = models.CharField(max_length=50)
+    
+    def __str__(self):
+        return self.email
+    class Meta:
+        verbose_name_plural = 'accountControl'
